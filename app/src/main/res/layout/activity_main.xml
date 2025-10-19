@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/numeTrupaTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nume_trupa"
+        android:layout_marginTop="15sp"
+        android:layout_marginStart="15sp"/>
+
+    <EditText
+        android:id="@+id/numeTrupaET"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/nume_trupa"
+        android:layout_marginStart="15sp"/>
+
+    <TextView
+        android:id="@+id/genTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gen"
+        android:layout_marginTop="30sp"
+        android:layout_marginStart="15sp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15sp">
+
+        <RadioButton
+            android:id="@+id/rockRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rock"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/popRadioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pop" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/locatieTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/locatie"
+        android:layout_marginTop="30sp"
+        android:layout_marginStart="15sp"/>
+
+    <EditText
+        android:id="@+id/locatieET"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/locatie"
+        android:layout_marginStart="15sp"/>
+
+    <TextView
+        android:id="@+id/numarBileteTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numar_bilete"
+        android:layout_marginTop="30sp"
+        android:layout_marginStart="15sp"/>
+
+    <EditText
+        android:id="@+id/numarBileteET"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginStart="15sp"
+        android:hint="@string/numar_bilete"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/afiseaza"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="10dp"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">concertPracticeApp</string>
+    <string name="nume_trupa">Nume trupa:</string>
+    <string name="locatie">Locatie:</string>
+    <string name="numar_bilete">Numar bilete:</string>
+    <string name="afiseaza">Afiseaza</string>
+    <string name="gen">Gen:</string>
+    <string name="rock">Rock</string>
+    <string name="pop">Pop</string>
+</resources>

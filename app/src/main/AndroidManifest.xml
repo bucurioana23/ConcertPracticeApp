@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ConcertPracticeApp">
         <activity
+            android:name=".listViewConcertsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

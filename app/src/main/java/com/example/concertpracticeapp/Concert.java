@@ -1,6 +1,8 @@
 package com.example.concertpracticeapp;
 
-public class Concert {
+import java.io.Serializable;
+
+public class Concert implements Serializable {
     private String numeTrupa;
     private String locatie;
     public enum Gen {

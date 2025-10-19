@@ -1,5 +1,6 @@
 package com.example.concertpracticeapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -24,10 +25,12 @@ public class MainActivity extends AppCompatActivity {
     EditText numarBileteET;
     RadioGroup radioGroup;
     Button button;
-    ListView listView;
+    //ListView listView;
+
+    Button button2;
 
     ArrayList<Concert> listaConcerte;
-    ArrayAdapter<Concert> adapter;
+    //ArrayAdapter<Concert> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +48,12 @@ public class MainActivity extends AppCompatActivity {
         numarBileteET = findViewById(R.id.numarBileteET);
         radioGroup = findViewById(R.id.radioGroup);
         button = findViewById(R.id.button);
-        listView = findViewById(R.id.listView);
+        button2 = findViewById(R.id.button2);
+        //listView = findViewById(R.id.listView);
 
         listaConcerte = new ArrayList<>();
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listaConcerte);
-        listView.setAdapter(adapter);
+        //adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listaConcerte);
+        //listView.setAdapter(adapter);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,13 +100,24 @@ public class MainActivity extends AppCompatActivity {
                     Concert concert = new Concert(numeTrupa,locatie,numarLocuri,gen);
 
                     listaConcerte.add(concert);
-                    adapter.notifyDataSetChanged();
+                    //adapter.notifyDataSetChanged();
 
                     numeTrupaET.setText("");
                     locatieET.setText("");
                     numarBileteET.setText("");
                     numeTrupaET.requestFocus();
                 }
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, listViewConcertsActivity.class);
+
+                intent.putExtra("lista_concerte_key",listaConcerte);
+
+                startActivity(intent);
             }
         });
 

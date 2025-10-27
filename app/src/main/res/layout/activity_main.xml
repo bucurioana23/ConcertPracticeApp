@@ -86,6 +86,22 @@
         android:layout_marginStart="15sp"
         android:hint="@string/numar_bilete"/>
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/data"
+        android:layout_marginTop="30sp"
+        android:layout_marginStart="15sp"/>
+
+    <EditText
+        android:id="@+id/dataET"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:layout_marginStart="15sp"
+        android:hint="@string/data"/>
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"

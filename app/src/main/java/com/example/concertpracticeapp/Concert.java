@@ -1,6 +1,7 @@
 package com.example.concertpracticeapp;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Concert implements Serializable {
     private String numeTrupa;
@@ -13,11 +14,14 @@ public class Concert implements Serializable {
 
     private int numarBilete;
 
-    public Concert(String numeTrupa, String locatie, int numarBilete, Gen gen) {
+    private Date data;
+
+    public Concert(String numeTrupa, String locatie, int numarBilete, Gen gen, Date data) {
         this.numeTrupa = numeTrupa;
         this.locatie = locatie;
         this.numarBilete = numarBilete;
         this.gen = gen;
+        this.data = data;
     }
 
     public String getNumeTrupa() {
@@ -52,11 +56,22 @@ public class Concert implements Serializable {
         this.numarBilete = numarBilete;
     }
 
+    public Date getData() {
+        return data;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
+
     @Override
     public String toString() {
-        return "numeTrupa='" + numeTrupa + '\'' +
+        return "Concert{" +
+                "numeTrupa='" + numeTrupa + '\'' +
                 ", locatie='" + locatie + '\'' +
                 ", gen=" + gen +
-                ", numarBilete=" + numarBilete;
+                ", numarBilete=" + numarBilete +
+                ", data=" + data +
+                '}';
     }
 }
